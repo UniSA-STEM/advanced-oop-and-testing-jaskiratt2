@@ -9,6 +9,16 @@ This is my own work as defined by the University's Academic Integrity Policy.
 
 class Animal:
     def __init__(self, name, species, age, dietary_needs):
+        if name == "":
+            print("Error: Sorry!! Animal's name cannot be empty.")
+            return
+        if age < 0:
+            print("Error: Sorry!! Age cannot be negative.")
+            return
+        if dietary_needs == "":
+            print("Error: Sorry!! Dietary needs to be provided.")
+            return
+
         self.name = name
         self.species = species
         self.age = age
