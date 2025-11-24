@@ -1,6 +1,6 @@
 '''
 File: filename.py
-Description: A brief description of this Python module.
+Description: Represents the parent class for all zoo staff. its like the base
 Author: Jaskirat Uppal
 ID: 110426141
 Username: uppjy001
@@ -12,6 +12,7 @@ class Staff:
         if name == "":
             print("Error: Sorry! There should be a staff name everytime")
             return
+        # saves the name and job title
         self.__name = name
         self.__role = role
 
