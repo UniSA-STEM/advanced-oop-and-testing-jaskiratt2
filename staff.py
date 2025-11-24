@@ -1,5 +1,5 @@
 '''
-File: filename.py
+File: staff.py
 Description: Represents the parent class for all zoo staff. its like the base
 Author: Jaskirat Uppal
 ID: 110426141

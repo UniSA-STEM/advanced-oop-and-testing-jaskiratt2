@@ -1,12 +1,12 @@
 '''
-File: filename.py
-Description: A brief description of this Python module.
+File: enclosure.py
+Description: Represents a zoo enclosure which holds animals
 Author: Jaskirat Uppal
 ID: 110426141
 Username: uppjy001
 This is my own work as defined by the University's Academic Integrity Policy.
 '''
-
+# enclosure class
 class Enclosure:
     def __init__(self, enclosure_id, size, environment):
         if enclosure_id == "":
@@ -14,13 +14,13 @@ class Enclosure:
             return
         if size <=0:
             print("Error: Sorry! Size needs to be greater than 0.")
-
+# private attributes
         self.__id = enclosure_id
         self.__size = size
         self.__environment = environment
         self.__animal = []
         self.__cleanliness = 100
-
+#usage of getters so no other classes cna ask for info
     def get_id(self):
         return self.__id
     def get_size(self):
@@ -46,17 +46,7 @@ class Enclosure:
             self.__cleanliness = 0
     def show_info(self):
         return " Enclosure " + self.__id + " has been " + str(len(self.__animal)) + " animals and cleanliness " + str(self.__cleanliness)
-    # def add_animal(self, animal):
-    #     if animal.is_under_treatment():
-    #         print("Sorry! Cannot add" + animal.get_name() + ": animal is under treatment.")
-    #         return
-    #         self.__animal.append(animal)
-    # def remove_animal(self, animal):
-    #     if animal.is_under_treatment():
-    #         print("Sorry! Cannot remove" + animal.get_name() + ": animal is under treatment.")
-    #         return
-    #     if animal in self.__animal:
-    #         self.__animal.remove(animal)
+
 
     def __str__(self):
         return "Enclosure " + self.__id + " (" + self.__environment + ") - " + str(len(self.__animal)) + " animals"
