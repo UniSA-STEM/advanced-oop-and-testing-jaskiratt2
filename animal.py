@@ -19,26 +19,35 @@ class Animal:
             print("Error: Sorry!! Dietary needs to be provided.")
             return
 
-        self.name = name
-        self.species = species
-        self.age = age
-        self.dietary_needs = dietary_needs
-        self.health_records = []
+        self.__name = name
+        self.__species = species
+        self.__age = age
+        self.__dietary_needs = dietary_needs
+        self.__health_records = []
 
     def get_name(self):
-        return self.name
+        return self.__name
     def get_species(self):
-        return self.species
+        return self.__species
     def get_age(self):
-        return self.age
+        return self.__age
     def get_dietary_needs(self):
-        return self.dietary_needs
+        return self.__dietary_needs
     def get_health_records(self):
-        return self.health_records
+        return self.__health_records
 
     def make_sound(self):
-        return f"{self.name} make a sound"
+        return f"{self.__name} make a sound"
     def eat(self):
-        return f"{self.name} is eating {self.dietary_needs}"
+        return f"{self.__name} is eating {self.__dietary_needs}"
     def sleep(self):
-        return f"{self.name} is sleeping"
+        return f"{self.__name} is sleeping"
+
+    def add_health_record(self, record):
+        self.__health_records.append(record)
+
+    def is_under_treatment(self):
+        for record in self.__health_records:
+             if record.get_severity() in ["high", "emergency"] and not record.is_resolved():
+                return True
+        return False

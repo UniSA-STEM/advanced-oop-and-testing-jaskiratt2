@@ -8,7 +8,7 @@ This is my own work as defined by the University's Academic Integrity Policy.
 '''
 
 class Staff:
-    def _init__ (self,name,role):
+    def __init__ (self,name,role):
         if name == "":
             print("Error: Sorry! There should be a staff name everytime")
             return
@@ -16,9 +16,9 @@ class Staff:
         self.__role = role
 
     def get_name(self):
-        return self.name
+        return self.__name
     def get_role(self):
-        return self.role
+        return self.__role
     def work(self):
         return self.__name + " works as " + self.__role
     def __str__(self):

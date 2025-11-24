@@ -46,3 +46,17 @@ class Enclosure:
             self.__cleanliness = 0
     def show_info(self):
         return " Enclosure " + self.__id + " has been " + str(len(self.__animal)) + " animals and cleanliness " + str(self.__cleanliness)
+    # def add_animal(self, animal):
+    #     if animal.is_under_treatment():
+    #         print("Sorry! Cannot add" + animal.get_name() + ": animal is under treatment.")
+    #         return
+    #         self.__animal.append(animal)
+    # def remove_animal(self, animal):
+    #     if animal.is_under_treatment():
+    #         print("Sorry! Cannot remove" + animal.get_name() + ": animal is under treatment.")
+    #         return
+    #     if animal in self.__animal:
+    #         self.__animal.remove(animal)
+
+    def __str__(self):
+        return "Enclosure " + self.__id + " (" + self.__environment + ") - " + str(len(self.__animal)) + " animals"
